@@ -1,0 +1,58 @@
+html_generation_task:
+  description: >
+    Generate a complete HTML page based on the user's requirements. The purpose of the website is as follows: {purpose}.
+
+    The name of the user is {name}.
+
+    The stated theme of the website will be: {theme}. The color scheme of website will be as follows: {color}.
+    Unless stated otherwise, avoid gray and other dull colors.
+
+    The content of the website will be surrounding: {content}. 
+    Unless stated otherwise, the website should automatically include a header, navbar, and footer.
+    
+    The user wants the layout of the website will be as follows: {layout}
+    Unless stated otherwise, keep the main content and sections centered. Unless stated otherwise, Navbar should be sticky and avoid the color white.
+
+    Ensure that the HTML structure is clean, accessible, and visually appealing. Make sure it is very detailed to the sepcifications.
+    Furthermore, make the website full of information. If the user gives multiple "sections" for content, each section should have at least 220 words.
+    Do not use the generic Arial font. Based on input, deduce the best font typeface for the website.
+
+    The user's resume is as follows: {resume}.
+  expected_output: >
+    A fully-formed HTML page with the requested purpose, theme, color, content, and layout.
+
+    Unless stated otherwise, avoid gray and other dull colors.
+    Unless stated otherwise, the website should automatically include a header, navbar, and footer.
+    Unless stated otherwise, keep the main content and sections centered in the middle of the webpage.
+    Unless stated otherwise, Navbar should be sticky and avoid the color white.
+
+    Only generate the HTML output. **Do not generate text before or after the output**.
+    **Do not use the generic Arial font. Based on input, deduce the best font typeface for the website. Use a font size of no smaller than 16 for the body content.**
+    **Include plenty of comments in your code.**
+    **Do not enclose your output in ```html symbols.**
+    **GENERATE ONLY THE HTML CODE, NOTHING ELSE.**
+  agent: html_generator
+
+css_generation_task:
+  description: >
+    Generate a complete CSS page based on the HTML page you are given.
+  expected_output: >
+    A fully-formed CSS page with the requested purpose, theme, color, content, and layout.
+    Link to the page "website.html".
+    **Do not generate text before or after the output**.
+    **Include plenty of comments in your code.**
+    **Do NOT enclose your output in ```css symbols.**
+    **GENERATE ONLY THE CSS CODE, NOTHING ELSE.**
+  agent: css_generator
+
+javascript_generation_task:
+  description: >
+    Generate a complete JavaScript page based on the HTML and CSS pages you are given.
+  expected_output: >
+    A fully-formed JavaScript page with the requested purpose, theme, color, content, and layout.
+    
+    **Do not generate text before or after the output**.
+    **Include plenty of comments in your code.**
+    **Do not enclose your output in ```javascript symbols.**
+    **GENERATE ONLY THE JAVASCRIPT CODE, NOTHING ELSE.**
+  agent: javascript_generator

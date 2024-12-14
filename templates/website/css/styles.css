@@ -1,0 +1,72 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #fefefe; /* Sets a subtle white background */
+    color: #333; /* Dark grey for the primary content */
+}
+
+/* Header styles */
+header {
+    background-color: #fabc60; /* Light orange for header background */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #fab060; /* Slightly darker orange for navbar */
+    padding: 10px 0;
+}
+
+/* Navigation links */
+nav a {
+    color: #fff; /* White links for visibility against nav background */
+    text-decoration: none;
+    margin: 0 15px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #333; /* Changes link color to dark grey on hover */
+}
+
+/* Main content container */
+.container {
+    max-width: 800px; /* Limits content width for readability */
+    margin: 0 auto; /* Centers the container */
+    padding: 50px 20px; /* Adds padding inside the container */
+}
+
+/* Sections are spaced clearly */
+section {
+    margin-bottom: 60px; /* Separates sections with a bottom margin */
+}
+
+/* Headings styles */
+h1, h2 {
+    color: #f07c04; /* Bold orange for headings */
+    text-align: center; /* Centers all headings */
+}
+
+/* General paragraph styles */
+p {
+    text-align: justify; /* Justifies text for neat alignment */
+    line-height: 1.6; /* Line height for readability */
+}
+
+/* Footer styles */
+footer {
+    background-color: #fabc60; /* Matches header for consistency */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,20 @@
+[project]
+name = "website_generator"
+version = "0.1.0"
+description = "website-generator using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.83.0,<1.0.0"
+]
+
+[project.scripts]
+website_generator = "website_generator.main:run"
+run_crew = "website_generator.main:run"
+train = "website_generator.main:train"
+replay = "website_generator.main:replay"
+test = "website_generator.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
