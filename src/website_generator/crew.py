@@ -1,5 +1,6 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task, before_kickoff, after_kickoff
+from crewai_tools import SerperDevTool, ScrapeWebsiteTool
 
 # Uncomment the following line to use an example of a custom tool
 # from website_generator.tools.custom_tool import MyCustomTool
@@ -31,6 +32,7 @@ class WebsiteGenerator():
 		return Agent(
 			config=self.agents_config['html_generator'],
 			# tools=[MyCustomTool()], # Example of custom tool, loaded on the beginning of file
+			tools=[SerperDevTool(), ScrapeWebsiteTool()],
 			verbose=True
 		)
 	

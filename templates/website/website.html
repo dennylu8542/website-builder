@@ -3,100 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denny Lu's Portfolio</title>
-    <!-- Link to Google Fonts for artistic modern font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    <!-- External stylesheet -->
+    <title>Denny Lu - Portfolio</title>
     <style>
+        /* Import a unique and artistic Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+        
+        /* Define root styles for the light color scheme */
+        :root {
+            --background-color: #f0f8ff; /* Alice Blue */
+            --primary-color: #ff4081; /* Pink Accent */
+            --secondary-color: #40c4ff; /* Light Blue Accent */
+            --text-color: #000000; /* Black for readability */
+            --highlight-color: #ffe082; /* Light Yellow for highlights */
+        }
+
         body {
             font-family: 'Roboto Slab', serif;
-            font-size: 16px;
             margin: 0;
-            padding: 0;
-            background-color: #fefefe;
-            color: #333;
+            font-size: 16px;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
-        header, footer {
-            background-color: #fabc60;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
+
         header {
+            background-color: var(--primary-color);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            width: 100%;
+            padding: 1rem;
+            color: white;
         }
+
         nav {
             display: flex;
             justify-content: center;
-            background-color: #fab060;
-            padding: 10px 0;
+            gap: 1rem;
         }
+
         nav a {
-            color: #fff;
+            color: white;
             text-decoration: none;
-            margin: 0 15px;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
+            font-weight: bold;
         }
+
         nav a:hover {
-            color: #333;
+            color: var(--highlight-color);
         }
-        .container {
+
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .section {
+            padding: 50px;
+            text-align: center;
             max-width: 800px;
             margin: 0 auto;
-            padding: 50px 20px;
         }
-        section {
-            margin-bottom: 60px;
-        }
-        h1, h2 {
-            color: #f07c04;
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
             text-align: center;
-        }
-        p {
-            text-align: justify;
-            line-height: 1.6;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+    <!-- Header section with navigation -->
     <header>
-        <h1>Denny Lu's Portfolio</h1>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#work">My Work</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#work">My Work</a>
-        <a href="#education">My Education</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello, I'm Denny Lu, a passionate photographer based in Irvine, CA. With roots in the charming town of Temecula, I have grown and found my professional calling in creative photography. My journey began academically at the University of California, Irvine, where I cultivated my artistic skills alongside technical studies. Beyond academics, I honed crucial soft skills while working at McDonald's for five years, where I thrived in fast-paced environments and learned the value of sequencing tasks efficiently. Accolades include a Gold Presidential Service Award and a Congressional Service Award, accomplishments that reflect my dedication, perseverance, and leadership capabilities. Beyond the lens, I am a storyteller at heart, binding the fine threads of composition, lighting, and narrative to weave captivating tales through my images. As I continue to explore and grow in this magnificent craft, my goal is to not only capture moments but create them, infusing each shot with a dynamic and modern elegance.</p>
-        </section>
-        
-        <section id="work">
-            <h2>My Work</h2>
-            <p>My portfolio is a tapestry of diverse photographic styles, encompassing everything from sweeping landscapes to intimate portraits. Each project is approached with a unique perspective, as I strive to push boundaries and explore new possibilities. Significant projects include capturing intricate details of bustling cityscapes and serene rural settings with equal finesse. My work is deeply influenced by my surroundings and experiences, always seeking to portray the beauty and emotion within every frame. With each click of the shutter, my aim is to create an emotional connection, enabling the viewer to experience the subject as intimately as I do. Collaborating with local businesses and private clients in various settings has enriched my journey, providing invaluable insights into professional-grade work. With an eye for detail and a passion for innovation, I constantly seek the perfect balance between artistic expression and client satisfaction.</p>
-        </section>
-        
-        <section id="education">
-            <h2>My Education</h2>
-            <p>My educational journey laid a foundational bedrock for my future endeavors in photography. I graduated from the University of California, Irvine, where I expanded my horizons academically and artistically. UCI provided me with an ambiance replete with creativity and critical thinking, allowing me to immerse myself in various photography projects while understanding their broader context. Prior to this, I graduated with a splendid 4.33 GPA from Great Oak High School, in Temecula. This institution polished my leadership skills, which were recognized through prestigious awards, including two vital leadership awards—Gold Presidential Service Award and Congressional Service Award. These not only acknowledge my academic excellence but also my dedication to community service and leadership. Through education, I learned to appreciate structure and spontaneity in equal measure, which are integral elements that I incorporate into my photographic compositions today.</p>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact Information</h2>
-            <p>If you've resonated with my work and wish to collaborate, feel free to reach out. Whether for commissioned work, collaborations, or just a friendly conversation about art and photography, I am always eager to connect with like-minded individuals. I am based in the scenic city of Irvine, CA, and am more than willing to travel for projects that evoke passion and innovation. To get in touch, you can email me at <strong><a href="mailto:dennylu.photography@example.com">dennylu.photography@example.com</a></strong> or connect with me via social media platforms - Instagram and LinkedIn. Let’s capture the essence in every moment, and together, turn visions into reality. I look forward to hearing from you and possibly working together on future projects that inspire and excite.</p>
-        </section>
-    </div>
+    <!-- Hero section -->
+    <section id="hero" class="hero">
+        <img src="your-image-url.jpg" alt="Denny Lu Portrait">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hello! I'm Denny Lu, a passionate college student ready to showcase my skills and projects.</p>
+    </section>
 
+    <!-- About Me section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>My name is Denny Lu, I am currently a college student pursuing a degree in Computer Science. My academic journey has equipped me with a robust foundation in programming, data structures, and algorithm design. I am incredibly passionate about technology and the ways in which it can be harnessed to solve real-world problems.</p> 
+        <p>My interests include software development, artificial intelligence, and cybersecurity. Aside from my studies, I actively participate in coding competitions and tech seminars to continuously enhance my skills and knowledge. My goal is to contribute to innovative projects that add value to society.</p>
+    </section>
+
+    <!-- My Work section -->
+    <section id="work" class="section">
+        <h2>My Work</h2>
+        <p>During my time at university, I have been involved in various projects spanning different areas of technology. One of my notable projects was developing a web application for managing student tasks and deadlines effectively, which helped to improve productivity by automating reminders and organizing schedules efficiently.</p> 
+        <p>I have also collaborated in a research project aimed at developing an AI-based chatbot that provides mental wellness support. This project highlights my capability to work within a team, tackle complex problems, and implement creative solutions. I am continually seeking opportunities to engage in more projects that challenge my skills and drive my passion for technology.</p>
+    </section>
+
+    <!-- Education section -->
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <p>I am currently enrolled in the Bachelor of Science in Computer Science program at [University Name], and I am in my [Year/Stage, e.g., junior year]. During my studies, I have gained comprehensive knowledge in software engineering principles and database management systems.</p>
+        <p>My coursework includes algorithm design, operating systems, and network security, among other subjects that have prepared me for practical applications in the tech industry. I have been recognized for my academic achievements with [Any awards or honors], which has motivated me to continue striving for excellence in my field of study.</p>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>If you would like to discuss potential collaboration or simply want to connect, feel free to reach out to me. You can contact me via email at <a href="mailto:denny.lu@example.com">denny.lu@example.com</a>, or connect with me through my LinkedIn profile: <a href="https://www.linkedin.com/in/dennylu" target="_blank">Denny Lu on LinkedIn</a>.</p>
+        <p>I look forward to connecting with like-minded individuals who are passionate about technology and innovation. Thank you for visiting my portfolio!</p>
+    </section>
+
+    <!-- Footer section -->
     <footer>
-        <p>&copy; 2023 Denny Lu. All Rights Reserved.</p>
+        <p>© 2023 Denny Lu Portfolio</p>
     </footer>
 </body>
 </html>

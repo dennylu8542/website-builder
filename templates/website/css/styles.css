@@ -1,72 +1,116 @@
-body {
-    font-family: 'Roboto Slab', serif;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    background-color: #fefefe; /* Sets a subtle white background */
-    color: #333; /* Dark grey for the primary content */
+```css
+/* Import a unique and artistic Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+
+/* Define root styles for the light color scheme */
+:root {
+    --background-color: #f0f8ff; /* Alice Blue */
+    --primary-color: #ff4081; /* Pink Accent */
+    --secondary-color: #40c4ff; /* Light Blue Accent */
+    --text-color: #000000; /* Black for readability */
+    --highlight-color: #ffe082; /* Light Yellow for highlights */
 }
 
-/* Header styles */
+body {
+    /* Using Roboto Slab font for a modern feel */
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
 header {
-    background-color: #fabc60; /* Light orange for header background */
-    color: #fff; /* White text for contrast */
-    text-align: center;
-    padding: 20px;
+    /* Sticky header for constant navigation access */
+    background-color: var(--primary-color);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Small shadow for depth */
 }
 
-/* Navigation bar styles */
 nav {
+    /* Central alignment for navigation links */
     display: flex;
     justify-content: center;
-    background-color: #fab060; /* Slightly darker orange for navbar */
-    padding: 10px 0;
+    gap: 1rem;
 }
 
-/* Navigation links */
 nav a {
-    color: #fff; /* White links for visibility against nav background */
+    /* Bold and bright links for better visibility */
+    color: white;
     text-decoration: none;
-    margin: 0 15px;
-    letter-spacing: 1px;
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
 nav a:hover {
-    color: #333; /* Changes link color to dark grey on hover */
+    /* Highlight links on hover */
+    color: var(--highlight-color);
 }
 
-/* Main content container */
-.container {
-    max-width: 800px; /* Limits content width for readability */
-    margin: 0 auto; /* Centers the container */
-    padding: 50px 20px; /* Adds padding inside the container */
-}
-
-/* Sections are spaced clearly */
-section {
-    margin-bottom: 60px; /* Separates sections with a bottom margin */
-}
-
-/* Headings styles */
-h1, h2 {
-    color: #f07c04; /* Bold orange for headings */
-    text-align: center; /* Centers all headings */
-}
-
-/* General paragraph styles */
-p {
-    text-align: justify; /* Justifies text for neat alignment */
-    line-height: 1.6; /* Line height for readability */
-}
-
-/* Footer styles */
-footer {
-    background-color: #fabc60; /* Matches header for consistency */
-    color: #fff;
+.hero {
+    /* Centrally aligned hero section */
     text-align: center;
-    padding: 20px;
+    padding: 50px 20px;
+    background-color: var(--secondary-color);
+    color: white;
 }
+
+.hero img {
+    /* Responsive and circular portrait image */
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for focus */
+}
+
+.section {
+    /* General styling for sections */
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent for emphasis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 10px; /* Rounded corners for aesthetic appeal */
+}
+
+.section h2 {
+    /* Section headings styling */
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700; /* Strong emphasis on headings */
+}
+
+.section p {
+    line-height: 1.6; /* Improved readability */
+    margin-bottom: 1rem;
+}
+
+.section a {
+    /* Links within sections */
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.section a:hover {
+    color: var(--highlight-color);
+}
+
+footer {
+    /* Footer styling for cohesion with header */
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow for separation from content */
+}
+```

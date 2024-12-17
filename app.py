@@ -20,6 +20,10 @@ def tool():
 def privacy_policy():
     return render_template('privacy_policy.html')
 
+@app.route('/terms_of_use')
+def terms_of_use():
+    return render_template('terms_of_use.html')
+
 # API Endpoint for quiz submission
 
 @app.route('/api/submitQuiz', methods=['POST'])
@@ -44,9 +48,9 @@ def submit_quiz():
     if not color: 
         color = "Use a combination of light colors"
     if not content: 
-        content = "A portfolio with 4 sections: about me, my work, my education, and contact information."
+        content = "A portfolio with 5 sections: HERO section (with image), about me, my work, my education, and contact information"
     if not resume: 
-        resume = "None attached. Assume I am a college student."
+        resume = "None attached. Assume I am a college student"
 
     # Define the inputs to pass to CrewAI model
     inputs = {
