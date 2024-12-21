@@ -32,7 +32,7 @@ class WebsiteGenerator():
 		return Agent(
 			config=self.agents_config['html_generator'],
 			# tools=[MyCustomTool()], # Example of custom tool, loaded on the beginning of file
-			tools=[SerperDevTool(), ScrapeWebsiteTool()],
+			# tools=[SerperDevTool(), ScrapeWebsiteTool()],
 			verbose=True
 		)
 	
