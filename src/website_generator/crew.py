@@ -56,21 +56,24 @@ class WebsiteGenerator():
 	def html_generation_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['html_generation_task'],
-			output_file='/templates/website/website.html'
+			output_file='/templates/website/website.html',
+			mode='a'
 		)
 	
 	@task
 	def css_generation_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['css_generation_task'],
-			output_file='/templates/website/css/styles.css'
+			output_file='/templates/website/css/styles.css',
+			mode='a'
 		)
 	
 	@task
 	def javascript_generation_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['javascript_generation_task'],
-			output_file='/templates/website/js/script.js'
+			output_file='/templates/website/js/script.js',
+			mode='a'
 		)
 
 	@crew

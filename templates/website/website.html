@@ -1,136 +1,136 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denny Lu - Portfolio</title>
+    <title>Denny Lu's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Import a unique and artistic Google Font */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
-        
-        /* Define root styles for the light color scheme */
-        :root {
-            --background-color: #f0f8ff; /* Alice Blue */
-            --primary-color: #ff4081; /* Pink Accent */
-            --secondary-color: #40c4ff; /* Light Blue Accent */
-            --text-color: #000000; /* Black for readability */
-            --highlight-color: #ffe082; /* Light Yellow for highlights */
-        }
-
-        body {
-            font-family: 'Roboto Slab', serif;
+        /* Basic Reset */
+        *, *::after, *::before {
             margin: 0;
-            font-size: 16px;
-            background-color: var(--background-color);
-            color: var(--text-color);
+            padding: 0;
+            box-sizing: border-box;
         }
-
+        /* Define theme colors */
+        :root {
+            --primary-color: #f8b400;
+            --secondary-color: #ff6363;
+            --accent-color: #d9d9d9;
+            --dark-color: #333;
+        }
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #fff;
+            padding-top: 60px; /* For sticky navbar */
+        }
+        /* Navbar styles */
         header {
-            background-color: var(--primary-color);
-            position: sticky;
+            position: fixed;
             top: 0;
             width: 100%;
-            padding: 1rem;
-            color: white;
+            background-color: var(--primary-color);
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         nav {
             display: flex;
-            justify-content: center;
-            gap: 1rem;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1rem;
         }
-
         nav a {
-            color: white;
+            color: var(--dark-color);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
         }
-
-        nav a:hover {
-            color: var(--highlight-color);
-        }
-
+        /* Hero section */
         .hero {
+            background-image: url('https://via.placeholder.com/1500x600');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
             text-align: center;
-            padding: 50px;
-            background-color: var(--secondary-color);
-            color: white;
+            padding: 100px 20px;
         }
-
-        .hero img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
+        .hero h1 {
+            font-size: 3rem;
         }
-
-        .section {
-            padding: 50px;
+        /* Sections common styles */
+        section {
+            padding: 2rem 10%;
+            margin: 2rem auto;
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
         }
-
+        .about-me, .my-work, .education, .contact {
+            background-color: var(--accent-color);
+            border-radius: 8px;
+        }
+        /* Footer styles */
         footer {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--secondary-color);
+            color: var(--accent-color);
             text-align: center;
             padding: 1rem;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- Header section with navigation -->
+    
+    <!-- Navbar Section -->
     <header>
         <nav>
             <a href="#hero">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#work">My Work</a>
+            <a href="#about-me">About Me</a>
+            <a href="#my-work">My Work</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
-
-    <!-- Hero section -->
+    
+    <!-- Hero Section -->
     <section id="hero" class="hero">
-        <img src="your-image-url.jpg" alt="Denny Lu Portrait">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hello! I'm Denny Lu, a passionate college student ready to showcase my skills and projects.</p>
+        <h1>Denny Lu - Photographer</h1>
+        <p>Capturing moments, one click at a time.</p>
     </section>
-
-    <!-- About Me section -->
-    <section id="about" class="section">
+    
+    <!-- About Me Section -->
+    <section id="about-me" class="about-me">
         <h2>About Me</h2>
-        <p>My name is Denny Lu, I am currently a college student pursuing a degree in Computer Science. My academic journey has equipped me with a robust foundation in programming, data structures, and algorithm design. I am incredibly passionate about technology and the ways in which it can be harnessed to solve real-world problems.</p> 
-        <p>My interests include software development, artificial intelligence, and cybersecurity. Aside from my studies, I actively participate in coding competitions and tech seminars to continuously enhance my skills and knowledge. My goal is to contribute to innovative projects that add value to society.</p>
+        <p>Hello, I'm Denny Lu, a passionate photographer based in Irvine, CA. My journey into photography began in my hometown of Temecula, where I was always inspired by the vivid landscapes and vibrant community. I attended Great Oak High School, where I graduated with a notable 4.33 GPA, which set the stage for my academic journey at the University of California, Irvine (UCI). My dedication to community service has been a vital part of my life, earning me the prestigious Gold Presidential Service Award and a Congressional Service Award. I have honed my skills and professionalism over 5 years working at McDonald's, where I learned the value of hard work, teamwork, and customer satisfaction.</p>
     </section>
-
-    <!-- My Work section -->
-    <section id="work" class="section">
+    
+    <!-- My Work Section -->
+    <section id="my-work" class="my-work">
         <h2>My Work</h2>
-        <p>During my time at university, I have been involved in various projects spanning different areas of technology. One of my notable projects was developing a web application for managing student tasks and deadlines effectively, which helped to improve productivity by automating reminders and organizing schedules efficiently.</p> 
-        <p>I have also collaborated in a research project aimed at developing an AI-based chatbot that provides mental wellness support. This project highlights my capability to work within a team, tackle complex problems, and implement creative solutions. I am continually seeking opportunities to engage in more projects that challenge my skills and drive my passion for technology.</p>
+        <p>Photography has always been more than just a job to me; it's a way to freeze memories, to tell stories through visuals. Over the years, I have worked on numerous projects, ranging from intimate portraits to expansive landscapes. My work captures the essence of any given moment, ensuring that each photograph speaks aloud the unspoken word. I continuously strive to push the boundaries of creativity while maintaining an elegant and simplistic aesthetic that defines my visual style. My passion is fueled by the joy of capturing the perfect shot, whether it's the candid smile of a stranger or the breathtaking view from a hilltop at sunset.</p>
     </section>
-
-    <!-- Education section -->
-    <section id="education" class="section">
+    
+    <!-- Education Section -->
+    <section id="education" class="education">
         <h2>Education</h2>
-        <p>I am currently enrolled in the Bachelor of Science in Computer Science program at [University Name], and I am in my [Year/Stage, e.g., junior year]. During my studies, I have gained comprehensive knowledge in software engineering principles and database management systems.</p>
-        <p>My coursework includes algorithm design, operating systems, and network security, among other subjects that have prepared me for practical applications in the tech industry. I have been recognized for my academic achievements with [Any awards or honors], which has motivated me to continue striving for excellence in my field of study.</p>
+        <p>My educational journey is one filled with achievements and learning experiences. I am a proud alumnus of Great Oak High School, where I excelled academically, achieving a 4.33 GPA and gaining leadership knowledge. Post high school, I pursued higher education at the University of California, Irvine, where I expanded my horizons and deepened my understanding of both the arts and technology. My time at UCI has been transformative, providing me with invaluable insights and experiences that have significantly influenced my artistic vision and technical skills in photography.</p>
     </section>
-
-    <!-- Contact section -->
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>If you would like to discuss potential collaboration or simply want to connect, feel free to reach out to me. You can contact me via email at <a href="mailto:denny.lu@example.com">denny.lu@example.com</a>, or connect with me through my LinkedIn profile: <a href="https://www.linkedin.com/in/dennylu" target="_blank">Denny Lu on LinkedIn</a>.</p>
-        <p>I look forward to connecting with like-minded individuals who are passionate about technology and innovation. Thank you for visiting my portfolio!</p>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to see more of my work, or if you are interested in a potential collaboration, feel free to reach out. I am open to photography projects that challenge and inspire me, allowing me to showcase my skills and creativity. You can reach me via email at dennylu@example.com or follow me on social media for the latest updates on my journey behind the lens. I look forward to connecting with you and perhaps even capturing your stories.</p>
     </section>
-
-    <!-- Footer section -->
+    
+    <!-- Footer -->
     <footer>
-        <p>© 2023 Denny Lu Portfolio</p>
+        <p>&copy; 2023 Denny Lu Photography. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
+```

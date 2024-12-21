@@ -1,116 +1,135 @@
-```css
-/* Import a unique and artistic Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+/* Basic Reset */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Define root styles for the light color scheme */
+/* Define theme colors */
 :root {
-    --background-color: #f0f8ff; /* Alice Blue */
-    --primary-color: #ff4081; /* Pink Accent */
-    --secondary-color: #40c4ff; /* Light Blue Accent */
-    --text-color: #000000; /* Black for readability */
-    --highlight-color: #ffe082; /* Light Yellow for highlights */
+    --primary-color: #f8b400;
+    --secondary-color: #ff6363;
+    --accent-color: #d9d9d9;
+    --dark-color: #333;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
 }
 
 body {
-    /* Using Roboto Slab font for a modern feel */
-    font-family: 'Roboto Slab', serif;
-    margin: 0;
-    font-size: 16px;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #fff;
+    padding-top: 60px; /* For sticky navbar */
 }
 
+/* Navbar styles */
 header {
-    /* Sticky header for constant navigation access */
-    background-color: var(--primary-color);
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
-    padding: 1rem;
-    color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Small shadow for depth */
+    background-color: var(--primary-color);
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav {
-    /* Central alignment for navigation links */
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
 }
 
 nav a {
-    /* Bold and bright links for better visibility */
-    color: white;
+    color: var(--dark-color);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    /* Highlight links on hover */
-    color: var(--highlight-color);
+    color: var(--secondary-color);
 }
 
+/* Hero section */
 .hero {
-    /* Centrally aligned hero section */
+    background-image: url('https://via.placeholder.com/1500x600');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
     text-align: center;
-    padding: 50px 20px;
-    background-color: var(--secondary-color);
-    color: white;
+    padding: 100px 20px;
 }
 
-.hero img {
-    /* Responsive and circular portrait image */
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for focus */
+.hero h1 {
+    font-size: 3rem;
 }
 
-.section {
-    /* General styling for sections */
-    padding: 50px 20px;
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Sections common styles */
+section {
+    padding: 2rem 10%;
+    margin: 2rem auto;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent for emphasis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    border-radius: 10px; /* Rounded corners for aesthetic appeal */
 }
 
-.section h2 {
-    /* Section headings styling */
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-weight: 700; /* Strong emphasis on headings */
+.about-me, .my-work, .education, .contact {
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.section p {
-    line-height: 1.6; /* Improved readability */
-    margin-bottom: 1rem;
+.about-me h2, .my-work h2, .education h2, .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.section a {
-    /* Links within sections */
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s; /* Smooth color transition */
+.about-me p, .my-work p, .education p, .contact p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--dark-color);
 }
 
-.section a:hover {
-    color: var(--highlight-color);
+.about-me p {
+    text-align: justify;
 }
 
+/* Footer styles */
 footer {
-    /* Footer styling for cohesion with header */
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--secondary-color);
+    color: #fff;
     text-align: center;
     padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow for separation from content */
+    margin-top: 20px;
 }
-```
+
+footer p {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 2rem 5%;
+    }
+}

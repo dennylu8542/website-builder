@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
-<!-- This is a work-in-progress quiz page -->
-<!-- {{ url_for('static', filename='css/tool-style.css') }} -->
-<!-- Plan for 0.3: Make the quiz work -->
+<!-- This is a work-in-progress contact page -->
+<!-- It is a placeholder and does not yet work -->
  
 <html data-page="67441a82a27df5fae4725e27" data-site-code="8542397185e1" data-status-code="1" lang="en">
 	
@@ -62,10 +61,10 @@
 <div class="section">
     <div id="Forms" style="opacity:1" class="container-large"> 
         <div class="style-guide-section-header">
-            <h2 id="builder" class="heading small">Portfolio Builder tool</h2>
+            <h2 id="builder" class="heading small">Contact</h2>
               <div class="spacer-8">
               </div>
-            <p>Please provide your name and resume. The more detailed you are, the more well-designed your website will turn out to be.</p>
+            <p>Enter your message below.</p>
         </div>
         <div class="w-form">
             <form data-name="Form" name="quiz-form" id="quiz-form" method="get" class="quiz-form" data-wf-element-id="f3fae9c5-e71a-4d00-099d-8440a0a79a1f">
@@ -73,68 +72,20 @@
                 <label for="name" class="field-label">Name</label>
                 <input class="text-input w-input" maxlength="256" name="name" data-name="name" placeholder="Enter your name" type="text" id="name"/>
               </div>
-              <div class="field-block">
-                <label for="theme" class="field-label">What theme do you want your website to be?</label>
-                <input class="text-input w-input" maxlength="256" name="theme" data-name="theme" placeholder="(e.g. &quot;modern,&quot; &quot;stylistic,&quot; &quot;simple&quot;)" type="text" id="theme"/>
-              </div>
-              <div class="field-block">
-                <label for="color" class="field-label">What color scheme do you want your website to have?</label>
-                <input class="text-input w-input" maxlength="256" name="color" data-name="color" placeholder="(e.g. &quot;light blue,&quot; &quot;green,&quot; or &quot;decide a color for me based on my resume&quot;)" type="text" id="color"/>
-              </div>
-              <div class="field-block">
-                <label for="content" class="field-label">What is the content of the website that you want to display?</label>
-                <input class="text-input w-input" maxlength="256" name="content" data-name="content" placeholder="(e.g. &quot;Include 4 sections: about me, my work, my education, and contact information.&quot;)" type="text" id="content"/>
-              </div>
-              <div class="field-block"><label for="resume" class="field-label">Resume</label>
-                <textarea id="resume" name="resume" maxlength="5000" data-name="resume" placeholder="Paste your resume here. If you don't have a resume, give a description of yourself." class="text-input form w-input"></textarea>
+              <div class="field-block"><label for="message" class="field-label">Message</label>
+                <textarea id="message" name="message" maxlength="5000" data-name="message" placeholder="Type your message here" class="text-input form w-input"></textarea>
               </div>
               <div class="spacer-24"></div>
               <input type="submit" data-wait="Please wait..." class="button w-button" value="Submit"/>
             </form>
-                <div class="form-success w-form-done">
-                  <div>Thank you! Your website is being built and will be ready shortly. You will be redirected in approximately 30 seconds.</div>
-				  <script>
-					document
-					  .getElementById("quiz-form")
-					  .addEventListener("submit", function (event) {
-						event.preventDefault();
-			  
-						const content = document.getElementById("content").value;
-						const theme = document.getElementById("theme").value;
-						const color = document.getElementById("color").value;
-						const resume = document.getElementById("resume").value;
-						const name = document.getElementById("name").value;
-			  
-						fetch("/api/submitQuiz", {
-						  method: "POST",
-						  headers: {
-							"Content-Type": "application/json",
-						  },
-						  body: JSON.stringify({ theme, color, content, resume, name }),
-						})
-						  .then((response) => {
-							// Redirect to the /website endpoint
-							window.location.href = "/website";
-						  })
-						  .catch((error) => console.error("Error:", error));
-					  });
-				  </script>
-                </div>
-                <div class="form-error w-form-fail">
 
                 <!--
 					<div>Oops! Something went wrong. Please try again.</div>
 				-->
 					
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
+        </div>
+    </div>
+</div>
 
 <!-- Footer Section -->
 <section class="section secondary">

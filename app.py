@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for, session
 from src.website_generator.crew import WebsiteGenerator
 
+# CrewAI Flows Functionality
+from crewai.flow.flow import Flow, listen, start
+
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Required for session handling
 
@@ -13,6 +16,11 @@ def index():
 @app.route('/tool')
 def tool():
     return render_template('tool.html')
+
+# Route for the contact page
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 # Route for the admin pages (Privacy Policy)
 # In the future, I am planning to move this into an "admin" directory for easier organization
