@@ -1,136 +1,195 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denny Lu's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Using Google Fonts for a stylistic and modern font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Basic Reset */
-        *, *::after, *::before {
+        /* General Styling */
+        body {
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        /* Define theme colors */
-        :root {
-            --primary-color: #f8b400;
-            --secondary-color: #ff6363;
-            --accent-color: #d9d9d9;
-            --dark-color: #333;
-        }
-        html {
-            font-size: 18px;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
+            background-color: #FAF3E0; /* Light warm color */
+            color: #333;
             line-height: 1.6;
-            color: var(--dark-color);
-            background-color: #fff;
-            padding-top: 60px; /* For sticky navbar */
-        }
-        /* Navbar styles */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: var(--primary-color);
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        nav {
+            font-size: 16px; /* Minimum body font size */
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
             align-items: center;
-            padding: 1rem;
         }
-        nav a {
-            color: var(--dark-color);
+
+        /* Header and Navbar */
+        header {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            background-color: #FFF5E1; /* Avoiding white */
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 2px -2px gray;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
             text-decoration: none;
+            color: #FF7A5C;
             font-weight: 600;
         }
-        /* Hero section */
-        .hero {
-            background-image: url('https://via.placeholder.com/1500x600');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
+
+        /* Main Content */
+        main {
+            max-width: 800px;
             text-align: center;
-            padding: 100px 20px;
+            padding: 20px;
         }
-        .hero h1 {
-            font-size: 3rem;
-        }
-        /* Sections common styles */
+
         section {
-            padding: 2rem 10%;
-            margin: 2rem auto;
-            text-align: center;
+            padding: 40px 0;
         }
-        .about-me, .my-work, .education, .contact {
-            background-color: var(--accent-color);
-            border-radius: 8px;
+
+        section:nth-child(even) {
+            background-color: #FFEFCB; /* Alternating background colors for sections */
         }
-        /* Footer styles */
+
+        /* Footer */
         footer {
-            background-color: var(--secondary-color);
-            color: var(--accent-color);
+            width: 100%;
+            background-color: #FFC6A8;
+            padding: 10px 0;
             text-align: center;
-            padding: 1rem;
-            margin-top: 20px;
+        }
+
+        a {
+            color: #FF7A5C;
+        }
+        
+        /* HERO Image */
+        .hero {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            text-align: left;
+        }
+        
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .contact-form button {
+            background-color: #FF7A5C;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
         }
     </style>
+    <title>Denny Lu's Portfolio</title>
 </head>
 <body>
-    
-    <!-- Navbar Section -->
+
+    <!-- Header -->
     <header>
+        <h1>Denny Lu's Portfolio</h1>
+        <!-- Navigation -->
         <nav>
-            <a href="#hero">Home</a>
-            <a href="#about-me">About Me</a>
-            <a href="#my-work">My Work</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#work">My Work</a></li>
+                <li><a href="#education">My Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <h1>Denny Lu - Photographer</h1>
-        <p>Capturing moments, one click at a time.</p>
-    </section>
-    
-    <!-- About Me Section -->
-    <section id="about-me" class="about-me">
-        <h2>About Me</h2>
-        <p>Hello, I'm Denny Lu, a passionate photographer based in Irvine, CA. My journey into photography began in my hometown of Temecula, where I was always inspired by the vivid landscapes and vibrant community. I attended Great Oak High School, where I graduated with a notable 4.33 GPA, which set the stage for my academic journey at the University of California, Irvine (UCI). My dedication to community service has been a vital part of my life, earning me the prestigious Gold Presidential Service Award and a Congressional Service Award. I have honed my skills and professionalism over 5 years working at McDonald's, where I learned the value of hard work, teamwork, and customer satisfaction.</p>
-    </section>
-    
-    <!-- My Work Section -->
-    <section id="my-work" class="my-work">
-        <h2>My Work</h2>
-        <p>Photography has always been more than just a job to me; it's a way to freeze memories, to tell stories through visuals. Over the years, I have worked on numerous projects, ranging from intimate portraits to expansive landscapes. My work captures the essence of any given moment, ensuring that each photograph speaks aloud the unspoken word. I continuously strive to push the boundaries of creativity while maintaining an elegant and simplistic aesthetic that defines my visual style. My passion is fueled by the joy of capturing the perfect shot, whether it's the candid smile of a stranger or the breathtaking view from a hilltop at sunset.</p>
-    </section>
-    
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <h2>Education</h2>
-        <p>My educational journey is one filled with achievements and learning experiences. I am a proud alumnus of Great Oak High School, where I excelled academically, achieving a 4.33 GPA and gaining leadership knowledge. Post high school, I pursued higher education at the University of California, Irvine, where I expanded my horizons and deepened my understanding of both the arts and technology. My time at UCI has been transformative, providing me with invaluable insights and experiences that have significantly influenced my artistic vision and technical skills in photography.</p>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>If you would like to see more of my work, or if you are interested in a potential collaboration, feel free to reach out. I am open to photography projects that challenge and inspire me, allowing me to showcase my skills and creativity. You can reach me via email at dennylu@example.com or follow me on social media for the latest updates on my journey behind the lens. I look forward to connecting with you and perhaps even capturing your stories.</p>
-    </section>
-    
+
+    <!-- Main Content Wrapper -->
+    <main>
+        <!-- HERO Section -->
+        <section id="home" class="hero">
+            <h1>Welcome to My World</h1>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello, my name is Denny Lu. I am a passionate photographer residing in the picturesque city of Irvine, California. I grew up in Temecula and graduated from Great Oak High School with a stellar GPA of 4.33, ready to conquer the world with my lens. I then pursued my studies at UC Irvine, a decision which further fueled my desire to capture the beauty that surrounds me.
+                <br><br>
+                My journey as a photographer is complemented by my experience in leadership and community service. I am a proud recipient of the Gold Presidential Service Award and a Congressional Service Award, both evidences of my commitment towards community service and leadership beyond the lens.
+            </p>
+        </section>
+
+        <!-- My Work Section -->
+        <section id="work">
+            <h2>My Work</h2>
+            <p>
+                My work as a photographer is an ever-evolving journey in the pursuit of excellence. Over the years, I have honed my skills through various projects and collaborations that have tested my creative prowess and technical expertise. 
+                <br><br>
+                Each frame captured tells a unique tale, a blend of vivid colors and emotions that invite viewers into a story out of everyday moments. My portfolio showcases various projects, ranging from serene landscapes to intimate portraits, each with a distinctive narrative. I aim to not just capture moments, but to create lasting impressions that resonate with audiences and leave a lasting imprint on their minds.
+            </p>
+        </section>
+
+        <!-- My Education Section -->
+        <section id="education">
+            <h2>My Education</h2>
+            <p>
+                As a cornerstone of my professional foundation, my education has played a crucial role in shaping my journey as a creative professional. I graduated from Great Oak High School with a remarkable GPA of 4.33, setting a strong academic basis for future pursuits.
+                <br><br>
+                Following high school, I attended UC Irvine, a prestigious institution where I deepened my knowledge and honed my skills. During this time, I balanced rigorous academic pursuits with my passion for photography, participating in numerous projects that bridged theoretical learning with practical applications, paving the way for my current professional endeavors.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Interested in working together? Feel free to reach out via the form below:</p>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Denny Lu Photography. All rights reserved.</p>
+        <p>© 2023 Denny Lu | Designed with love in Irvine, CA</p>
     </footer>
 
 </body>
 </html>
-```

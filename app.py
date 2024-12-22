@@ -2,10 +2,15 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, s
 from src.website_generator.crew import WebsiteGenerator
 
 # CrewAI Flows Functionality
-from crewai.flow.flow import Flow, listen, start
+from crewai.flow.flow import Flow, listen, start, and_, or_, router
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Required for session handling
+
+# WIP
+# Integrating flows so the agents can interact with each other
+class WebDevFlow(Flow):
+    model="gpt-4o"
 
 # Route for the home page
 @app.route('/')
@@ -32,6 +37,8 @@ def privacy_policy():
 def terms_of_use():
     return render_template('terms_of_use.html')
 
+
+
 # API Endpoint for quiz submission
 
 @app.route('/api/submitQuiz', methods=['POST'])
@@ -52,13 +59,13 @@ def submit_quiz():
     if not name: 
         name = "John Doe"
     if not theme: 
-        theme = "Simple, modern, and elegant"
+        theme = "Simple, modern, and elegant. Use a unique font but not over-the-top"
     if not color: 
-        color = "Use a combination of light colors"
+        color = "Use a combination of warm light colors that compliment well with each other"
     if not content: 
-        content = "A portfolio with 5 sections: HERO section (with image), about me, my work, my education, and contact information"
+        content = "A portfolio with 5 sections: HERO section (with image), about me, my work, education, and contact information"
     if not resume: 
-        resume = "None attached. Assume I am a college student"
+        resume = "I do not have a resume. Assume I am a college student with basic work experience"
 
     # Define the inputs to pass to CrewAI model
     inputs = {
@@ -97,12 +104,12 @@ def display_website():
     css_input = html_output
     return render_template('website/website.html', html_content=html_output)
 
-# WIP
+# WIP Does not work
 def display_css():
     # Get the generated CSS from the session
     css_output = session.get('generated_html')
 
-# WIP
+# WIP Does not work
 def clean_css():
     """
     Cleans the /templates/website/css/styles.css file by removing all occurrences of '```'.
@@ -114,7 +121,7 @@ def clean_css():
         file.write(cleaned_content)
         file.truncate()  # Truncate the file to the current size (in case the new content is shorter)
 
-# WIP
+# WIP Does not work
 def clean_js():
     """
     Cleans the /templates/website/js/script.js file by removing all occurrences of '```'.

@@ -1,135 +1,134 @@
-/* Basic Reset */
-*, *::after, *::before {
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Define theme colors */
-:root {
-    --primary-color: #f8b400;
-    --secondary-color: #ff6363;
-    --accent-color: #d9d9d9;
-    --dark-color: #333;
-}
-
-html {
-    font-size: 18px;
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF3E0; /* Light warm color */
+    color: #333;
     line-height: 1.6;
-    color: var(--dark-color);
-    background-color: #fff;
-    padding-top: 60px; /* For sticky navbar */
-}
-
-/* Navbar styles */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: var(--primary-color);
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-nav {
+    font-size: 16px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    padding: 1rem;
 }
 
-nav a {
-    color: var(--dark-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: var(--secondary-color);
-}
-
-/* Hero section */
-.hero {
-    background-image: url('https://via.placeholder.com/1500x600');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+/* Header Styles */
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #FFF5E1; /* Gentle tint for standout */
+    padding: 10px 0;
     text-align: center;
-    padding: 100px 20px;
+    box-shadow: 0 4px 2px -2px gray; /* Subtle shadow for depth */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FF7A5C;
+    font-weight: 600; /* Slightly bolder for emphasis */
+    transition: color 0.3s ease; /* Smooth transition effect on hover */
+}
+
+nav ul li a:hover {
+    color: #FF5733; /* Hover effect color */
+}
+
+/* Main Content Styles */
+main {
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling for alternating sections to enhance readability */
+section {
+    padding: 40px 0;
+}
+
+section:nth-child(even) {
+    background-color: #FFEFCB; /* Light alternating background color */
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3em;
+    margin: 0;
 }
 
-.hero p {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+/* Contact Form Styles */
+.contact-form {
+    text-align: left;
+    max-width: 600px; /* To keep form elements contained */
+    margin: 0 auto; /* Center the form */
 }
 
-/* Sections common styles */
-section {
-    padding: 2rem 10%;
-    margin: 2rem auto;
-    text-align: center;
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px; /* Font size for easy reading */
 }
 
-.about-me, .my-work, .education, .contact {
-    background-color: var(--accent-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.contact-form button {
+    background-color: #FF7A5C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold; /* Bold for emphasis */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
-.about-me h2, .my-work h2, .education h2, .contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+.contact-form button:hover {
+    background-color: #FF5733; /* Darker shade for hover state */
 }
 
-.about-me p, .my-work p, .education p, .contact p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--dark-color);
-}
-
-.about-me p {
-    text-align: justify;
-}
-
-/* Footer styles */
+/* Footer Styles */
 footer {
-    background-color: var(--secondary-color);
-    color: #fff;
+    width: 100%;
+    background-color: #FFC6A8;
+    padding: 10px 0;
     text-align: center;
-    padding: 1rem;
-    margin-top: 20px;
+    position: relative;
 }
 
-footer p {
-    font-size: 0.9rem;
-    color: var(--accent-color);
+/* Hyperlink Styles */
+a {
+    color: #FF7A5C;
+    transition: color 0.3s ease; /* Smooth transition for link color */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    section {
-        padding: 2rem 5%;
-    }
+a:hover {
+    color: #FF5733; /* Another shade for link hover */
 }
